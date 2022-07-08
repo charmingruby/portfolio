@@ -5,11 +5,17 @@ const sidebarBtn = document.querySelector('.sidebar-toggle');
 const iconText = document.querySelector('.nav-right');
 const blob = document.querySelector('.blob');
 const text = document.querySelectorAll('.text');
-const nightModeDiv = document.querySelector('.night-mode');
 const nightMode = document.querySelector('.label');
 const nightModeIcons = document.querySelectorAll('.nm-btn');
+const topic = document.querySelectorAll('.topic');
+const content = document.querySelectorAll('.content');
 const body = document.querySelector('body');
 const main = document.querySelector('main');
+
+const cv = document.querySelectorAll('#cv');
+
+const allDark = document.querySelectorAll('.nm');
+const allLight = document.querySelectorAll('.lm');
 
 //Sidebar Minimize
 sidebarBtn.addEventListener('click', (e) => {
@@ -20,7 +26,7 @@ sidebarBtn.addEventListener('click', (e) => {
     iconText.classList.toggle('appear');
 
     text.forEach((el) => {
-        el.classList.toggle('visible');
+        el.classList.toggle('appear');
     })
 
     nightMode.classList.toggle('nightmode-close');
@@ -28,34 +34,34 @@ sidebarBtn.addEventListener('click', (e) => {
     nightModeIcons.forEach((el) => {
         el.classList.toggle('disappear');
     });
-
-    main.classList.toggle('main-push');
+    
+    content.forEach((el) => {
+        el.classList.toggle('content-push');
+    })
 });
 
 //Nightmode
 nightMode.addEventListener('click', () => {
-    console.log('night')
     body.classList.toggle('night');
-});
 
-//Sidebar Mobile
-/*function sidebarMobile(w) {
-    if(w.matches) {
-        sidebar.classList.add('disappear');
-    }
-}
-let width = window.matchMedia("(max-width: 768px)")
-sidebarMobile(width);
-width.addEventListener(sidebarMobile);
-*/
+    allDark.forEach((el) => {
+        el.classList.toggle('invisible');
+    })
+
+    allLight.forEach((el) => {
+        el.classList.toggle('invisible');
+    })
+
+    cv.forEach((el) => {
+        el.classList.toggle('disappear');
+    })
+});
 
 //Burguer Toggle
 headerToggle.addEventListener('click', (e) => {
     sidebar.classList.toggle('appear');
     sidebar.classList.toggle('sidebar-move');
     text.forEach((el) => {
-        el.classList.toggle('visible');
+        el.classList.toggle('appear');
     })
-
 })
-
