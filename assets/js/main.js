@@ -17,29 +17,6 @@ const cv = document.querySelectorAll('#cv');
 const allDark = document.querySelectorAll('.nm');
 const allLight = document.querySelectorAll('.lm');
 
-//Sidebar Minimize
-sidebarBtn.addEventListener('click', (e) => {
-    sidebar.classList.toggle('sidebar-move');
-
-    sidebarBtn.classList.toggle('sidebar-control');
-
-    iconText.classList.toggle('appear');
-
-    text.forEach((el) => {
-        el.classList.toggle('appear');
-    })
-
-    nightMode.classList.toggle('nightmode-close');
-    blob.classList.toggle('blob-close');
-    nightModeIcons.forEach((el) => {
-        el.classList.toggle('disappear');
-    });
-    
-    content.forEach((el) => {
-        el.classList.toggle('content-push');
-    })
-});
-
 //Nightmode
 nightMode.addEventListener('click', () => {
     body.classList.toggle('night');

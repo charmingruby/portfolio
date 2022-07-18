@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./assets/css/responsiviness.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
-
     <title>Gustavo Dias</title>
 </head>
 
@@ -18,76 +17,39 @@
 
     <!-- Header -->
     <header>
+        <div class="brand-icon">
+            <a href="#highlight">
+                <p>Gustavo Dias</p>
+            </a>
+        </div>
         <div class="header-toggle main-push">
             <input type="checkbox" id="toggle-burguer">
             <label class="burguer-container" for="toggle-burguer">
                 <div class="burguer"></div>
             </label>
         </div>
-        <p class="header-title">Gustavo Dias</p>
+        <div class="navigation">
+            <ul class="links">
+                <li class="nav-link">
+                    <a href="#about">
+                        <span class="text">About</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#skills">
+                        <span class="text">Skills</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#works">
+                        <span class="text">Works</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <div class="container">
-        <!-- Aside -->
-        <aside>
-            <img class="sidebar-toggle" src="./assets/img/sidebar-icons/sidebar-arrow.png">
-            <div class="nav-items">
-
-                <div class="nav-icon">
-                    <div class="nav-left">
-                        <span class="icon-img">GD</span>
-                    </div>
-                    <div class="nav-right">
-                        <h1 class="icon-title">Gustavo Dias</h1>
-                        <h2 class="icon-desc">FullStack | JS</h2>
-                    </div>
-                </div>
-
-                <div class="nav-navigation">
-                    <ul class="links">
-                        <li class="nav-link">
-                            <a href="#highlight">
-                                <img class="sidebar-icon" src="./assets/img/sidebar-icons/home-white.png">
-                                <span class="text">Home</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#about">
-                                <img class="sidebar-icon" src="./assets/img/sidebar-icons/about-white.png">
-                                <span class="text">About</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#skills">
-                                <img class="sidebar-icon" src="./assets/img/sidebar-icons/skills-white.png">
-                                <span class="text">Skills</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#works">
-                                <img class="sidebar-icon" src="./assets/img/sidebar-icons/works-white.png">
-                                <span class="text">Works</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#contact">
-                                <img class="sidebar-icon" src="./assets/img/sidebar-icons/contact-white.png">
-                                <span class="text">Contact</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="night-mode">
-                    <input type="checkbox" class="checkbox" id="night-mode">
-                    <label for="night-mode" class="label nightmode-close">
-                        <img class="moon nm-btn disappear" src="./assets/img/night-mode/moon.png">
-                        <img class="sun nm-btn disappear" src="./assets/img/night-mode/sun.png">
-                        <div class="blob blob-close"></div>
-                    </label>
-                </div>
-            </div>
-        </aside>
 
         <!-- Content -->
         <main>
@@ -114,7 +76,7 @@
                                     </p>
                                 </div>
                             </div>
-                            
+
                             <div class="highlight-links">
                                 <a href="https://github.com/charmingruby">
                                     <button class="highlight-link github">
@@ -126,8 +88,10 @@
                                 <a href="./assets/img/highlight/curriculo-gustavo.pdf" download>
                                     <button class="highlight-link cv">
                                         <p>CV</p>
-                                        <img id="cv" class="highlight-link-img" src="./assets/img/highlight/cv-light.png">
-                                        <img id="cv" class="highlight-link-img disappear" src="./assets/img/highlight/cv-dark.png">
+                                        <img id="cv" class="highlight-link-img"
+                                            src="./assets/img/highlight/cv-light.png">
+                                        <img id="cv" class="highlight-link-img disappear"
+                                            src="./assets/img/highlight/cv-dark.png">
                                     </button>
                                 </a>
                             </div>
@@ -161,9 +125,49 @@
             <section class="content" id="about">
                 <div class="about-bg content-bg">
                     <div class="about content-padding">
-                        about nanissa
-                    </div>
+                        <div class="content-title">
+                            <p>About me</p>
+                        </div>
+                        <div class="about">
+                            <div class="about-principal">
+                                <div class="about-infos">
+                                    <p>
+                                        I'm a 3rd period Computer Science Student at Federal University of Juiz de Fora.
+                                    </p>
 
+                                    <p>
+                                        Currently focused in learning and improving JavaScript skills, since the pure JS
+                                        to
+                                        the
+                                        their Frameworks.
+                                    </p>
+
+                                    <p> My creative and my studies as a developer made me possible to deliver charming
+                                        and
+                                        neat
+                                        websites with my Stack:
+                                    </p>
+                                </div>
+
+                                <div class="">
+                                    <img src="./assets/img/about/about-illustration.svg">
+                                </div>
+                            </div>
+
+                            <div class="">
+                                <p class="stack-info"><i class="fa fa-angle-double-right"></i><span
+                                        class="areas-about">BackEnd:</span> <i
+                                        class="devicon-nodejs-plain tec-icons"></i>Node.JS
+                                </p>
+                                <p class="stack-info"><i class="fa fa-angle-double-right"></i><span
+                                        class="areas-about">FrontEnd:</span> <i
+                                        class="devicon-react-original tec-icons"></i>React.JS</p>
+                                <p class="stack-info"><i class="fa fa-angle-double-right"></i><span
+                                        class="areas-about">Styles:</span> <i
+                                        class="devicon-tailwindcss-plain tec-icons"></i>Tailwind CSS</p>
+                            </div>
+                        </div>
+                    </div>
                     <a href="#skills">
                         <div class="down">
                             <span></span>
@@ -172,8 +176,17 @@
                         </div>
                     </a>
 
-                    <svg class="wave about lm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200"><path fill="#43355A" fill-opacity="1" d="M0,128L60,133.3C120,139,240,149,360,165.3C480,181,600,203,720,192C840,181,960,139,1080,117.3C1200,96,1320,96,1380,96L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-                    <svg class="wave about nm invisible" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200"><path fill="#36393f" fill-opacity="1" d="M0,128L60,133.3C120,139,240,149,360,165.3C480,181,600,203,720,192C840,181,960,139,1080,117.3C1200,96,1320,96,1380,96L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+                    <svg class="wave about lm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
+                        <path fill="#43355A" fill-opacity="1"
+                            d="M0,128L60,133.3C120,139,240,149,360,165.3C480,181,600,203,720,192C840,181,960,139,1080,117.3C1200,96,1320,96,1380,96L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+                        </path>
+                    </svg>
+                    <svg class="wave about nm invisible" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
+                        <path fill="#36393f" fill-opacity="1"
+                            d="M0,128L60,133.3C120,139,240,149,360,165.3C480,181,600,203,720,192C840,181,960,139,1080,117.3C1200,96,1320,96,1380,96L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+                        </path>
+                    </svg>
+
 
                 </div>
             </section>
@@ -193,8 +206,16 @@
                         </div>
                     </a>
 
-                    <svg class="wave about lm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#a393bf" fill-opacity="1" d="M0,96L48,122.7C96,149,192,203,288,213.3C384,224,480,192,576,176C672,160,768,160,864,165.3C960,171,1056,181,1152,197.3C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-                    <svg class="wave about nm invisible" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4f545c" fill-opacity="1" d="M0,96L48,122.7C96,149,192,203,288,213.3C384,224,480,192,576,176C672,160,768,160,864,165.3C960,171,1056,181,1152,197.3C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+                    <svg class="wave about lm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                        <path fill="#a393bf" fill-opacity="1"
+                            d="M0,96L48,122.7C96,149,192,203,288,213.3C384,224,480,192,576,176C672,160,768,160,864,165.3C960,171,1056,181,1152,197.3C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                        </path>
+                    </svg>
+                    <svg class="wave about nm invisible" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                        <path fill="#4f545c" fill-opacity="1"
+                            d="M0,96L48,122.7C96,149,192,203,288,213.3C384,224,480,192,576,176C672,160,768,160,864,165.3C960,171,1056,181,1152,197.3C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                        </path>
+                    </svg>
 
                 </div>
             </section>
@@ -207,36 +228,24 @@
                         works nanissa
                     </div>
 
-                    <a href="#contact">
-                        <div class="down">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </a>
-
-                    <svg class="wave about lm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280"><path fill="#43355A" fill-opacity="1" d="M0,256L48,261.3C96,267,192,277,288,266.7C384,256,480,224,576,229.3C672,235,768,277,864,261.3C960,245,1056,171,1152,122.7C1248,75,1344,53,1392,42.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-                    <svg class="wave about nm invisible" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280"><path fill="#36393f" fill-opacity="1" d="M0,256L48,261.3C96,267,192,277,288,266.7C384,256,480,224,576,229.3C672,235,768,277,864,261.3C960,245,1056,171,1152,122.7C1248,75,1344,53,1392,42.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-                  
-                </div>
-            </section>
-
-            <!-- Contact -->
-            <section class="content" id="contact">
-                <div class="contact-bg content-bg">
-
-                    <div class="content-padding">
-                        contact nanissa
-                    </div>
-
-                    
-
-                    <svg class="wave about lm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#a393bf" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,165.3C384,149,480,139,576,160C672,181,768,235,864,245.3C960,256,1056,224,1152,202.7C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-                    <svg class="wave about nm invisible" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4f545c" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,165.3C384,149,480,139,576,160C672,181,768,235,864,245.3C960,256,1056,224,1152,202.7C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+                    <svg class="wave about lm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
+                        <path fill="#43355A" fill-opacity="1"
+                            d="M0,256L48,261.3C96,267,192,277,288,266.7C384,256,480,224,576,229.3C672,235,768,277,864,261.3C960,245,1056,171,1152,122.7C1248,75,1344,53,1392,42.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                        </path>
+                    </svg>
+                    <svg class="wave about nm invisible" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
+                        <path fill="#36393f" fill-opacity="1"
+                            d="M0,256L48,261.3C96,267,192,277,288,266.7C384,256,480,224,576,229.3C672,235,768,277,864,261.3C960,245,1056,171,1152,122.7C1248,75,1344,53,1392,42.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                        </path>
+                    </svg>
 
                 </div>
             </section>
         </main>
+    </div>
+
+    <div class="contact-widget">
+        <img class="" src="./assets/img/widget/contact-white.png">
     </div>
 
     <script src="./assets/js/main.js"></script>
