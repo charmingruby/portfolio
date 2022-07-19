@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
-    --sidebar-bg:#453750;
+    --sidebar-bg:#342a45;
     --sidebar-bg-darker:#3b2f4e;
     --body-bg-darker:#433559;
     --body-bg:#a393bf;
@@ -13,7 +13,7 @@
     --nav-width-close: 72px;
 
     --default-margin: 0rem 5rem 0rem 5rem;
-    --content-margin: 3rem 5rem 0rem 5rem;
+    --content-margin: 3.5rem 5rem 0rem 5rem;
 }
 
 html{
@@ -87,6 +87,7 @@ header{
     align-items: center;
     width: 100%;
     height: 3rem;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.2);
     padding: var(--default-margin);
     background-color: var(--sidebar-bg-darker);
 
@@ -159,18 +160,20 @@ header{
     font-weight: 200;
 }
 
-/* Brand Icon */
-.brand-icon{
-
-}
-
 .brand-icon p{
-    font-size: 1.4em;
+    font-size: 1.6em;
     font-weight: 400;
     font-style: italic;
 }
 
-/* Navigation */
+.brand-icon span{
+    color: var(--button-bg);
+}
+
+.header-icon{
+    width: 24px;
+}
+
 .nav-navigation{
     width: 100%;
     font-weight: 200;   
@@ -191,17 +194,19 @@ header{
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 32px;
+    justify-content: center;
+    gap: 10px;
     transition: .5s;
 }
 
-.sidebar-icon{
-    width: 32px;    
+.nav-link a:hover{
+    transform: scale(1.2);
 }
 
-.text{
-    font-size: 1em;
-}   
+.nav-link span{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
 
 /* Contact Widget */
 .contact-widget{
@@ -213,7 +218,7 @@ header{
     justify-content: center;
     align-items: center;
     padding: 10px 10px;
-    border-radius: 0% 50% 50% 50%;
+    border-radius: 50% 50% 50% 0%;
     box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.2);
     background-color: var(--sidebar-bg-darker);
     transition: .1s;
@@ -239,6 +244,29 @@ header{
     height: 100vh;
     position: relative;
     z-index: 1;
+}
+
+.content-title{
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.content-title-icon{
+    width: 32px;
+}
+
+.content-title-txt{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.content-title-line{
+    width: 5rem;
+    height: 3px;
+    background-color: var(--button-bg);
 }
 
 .down{
@@ -405,9 +433,66 @@ header{
     padding: var(--content-margin);
 }
 
+.about-infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 1rem;
+    width: 28rem;
+}
+
+.about-infos p{
+    font-size: 1.3rem;
+    border-left: 2.5px solid white;
+    padding-left: 10px;
+}
+
+.about-illustration{
+    padding-right: 1rem;
+}
+
+.about-illustration img{
+    width: 700px;
+}
+
+.about-principal{
+    display: flex;
+    gap: 4rem;
+}
+
+.about-stack{
+    display: flex;
+    width: 28rem;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+.tec-icons{
+    font-size: 2.4rem;
+    color: var(--sidebar-bg-darker);
+    background-color: var(--button-bg);
+    padding: 3px;
+    border-radius: 6px;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: .1s;
+}
+
+.tec-icons2{
+    color: var(--button-bg);
+    background-color: var(--sidebar-bg-darker); 
+}
+
+.tec-icons:hover{
+    transform: scale(1.2);
+    transition: .1s;
+}
+
 /* Skills */
 
-/* Works */
-.works-bg.content-bg{
+/* Projects */
+.projects-bg.content-bg{
     background-color: var(--body-bg);
 }
