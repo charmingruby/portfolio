@@ -14,30 +14,9 @@ const main = document.querySelector('main');
 
 const cv = document.querySelectorAll('#cv');
 
-const allDark = document.querySelectorAll('.nm');
-const allLight = document.querySelectorAll('.lm');
-
-//Nightmode
-nightMode.addEventListener('click', () => {
-    body.classList.toggle('night');
-
-    allDark.forEach((el) => {
-        el.classList.toggle('invisible');
-    })
-
-    allLight.forEach((el) => {
-        el.classList.toggle('invisible');
-    })
-
-    cv.forEach((el) => {
-        el.classList.toggle('disappear');
-    })
-});
-
 //Burguer Toggle
 headerToggle.addEventListener('click', (e) => {
     sidebar.classList.toggle('appear');
-    sidebar.classList.toggle('sidebar-move');
     text.forEach((el) => {
         el.classList.toggle('appear');
     })

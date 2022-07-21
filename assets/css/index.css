@@ -13,7 +13,7 @@
     --nav-width-close: 72px;
 
     --default-margin: 0rem 5rem 0rem 5rem;
-    --content-margin: 3.5rem 5rem 0rem 5rem;
+    --content-margin: 3.5rem 5rem 5.1rem 5rem;
 }
 
 html{
@@ -250,7 +250,7 @@ header{
     font-size: 2rem;
     font-style: italic;
     font-weight: 300;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .content-title-icon{
@@ -267,6 +267,10 @@ header{
     width: 5rem;
     height: 3px;
     background-color: var(--button-bg);
+}
+
+.section-content{
+    padding: 0px 2rem;
 }
 
 .down{
@@ -436,8 +440,7 @@ header{
 .about-infos{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    padding-left: 1rem;
+    justify-content: space-between;
     width: 28rem;
 }
 
@@ -445,6 +448,15 @@ header{
     font-size: 1.3rem;
     border-left: 2.5px solid white;
     padding-left: 10px;
+    transition: .1s;
+}
+
+.about-infos p:hover{
+    cursor: pointer;
+    transform: translateX(20px);
+    transition: .1s;
+    color: var(--sidebar-bg-darker);
+    border-left: 2.5px solid var(--button-bg);
 }
 
 .about-illustration{
@@ -452,21 +464,22 @@ header{
 }
 
 .about-illustration img{
-    width: 700px;
+    width: 50rem;
+    height: 30rem;
 }
 
 .about-principal{
     display: flex;
+    justify-content: space-between;
     gap: 4rem;
 }
 
 .about-stack{
     display: flex;
     width: 28rem;
-    gap: 1rem;
+    gap: 2rem;
     justify-content: space-between;
     margin-top: 1rem;
-    padding-left: 1rem;
 }
 
 .tec-icons{
@@ -476,6 +489,7 @@ header{
     padding: 3px;
     border-radius: 6px;
     box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.2);
+    border: 3px solid white;
     cursor: pointer;
     transition: .1s;
 }
@@ -491,6 +505,104 @@ header{
 }
 
 /* Skills */
+.skills-bg.content-bg{
+    position: relative;
+}
+
+.skills.content-padding{
+    
+}
+
+
+#carousel-button-previous{
+    position: absolute;
+    top: 50%;
+    margin-left: 5rem;
+}
+
+#carousel-button-next{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-right: 5rem;
+}
+
+.img-frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+.skill-tec{
+}
+
+.skill-card{
+    position: relative;
+    width: 320px;
+    height: 480px;
+    transition: .1s;
+    background-color: #ffffff;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.skill-card::before{
+    content: "";
+    position: absolute;
+    height: 25%;
+    width: 100%;
+    background-color: var(--button-bg);
+    border-radius: 20px 20px 0px 0px;
+}
+
+.card-content{
+    position: relative;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+}
+
+.tooltip-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    height: 16px;
+    width: 16px;
+    background-color: #ffffff;
+    font-weight: 500;
+    border-radius: 50%;
+    font-size: .8em;
+}
+
+.star{
+    width: 16px;
+}
+
+.skills.carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel{
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-card,
+.skill-card-hidden{
+    display: none;
+}
+
+.skill-card-visible{
+    display: block;
+}
 
 /* Projects */
 .projects-bg.content-bg{
