@@ -1,23 +1,49 @@
+// Burguer Toggle
 const headerToggle = document.querySelector('#toggle-burguer');
-const burguerMove = document.querySelector('.burguer-container');
-const sidebar = document.querySelector('aside');
-const sidebarBtn = document.querySelector('.sidebar-toggle');
-const iconText = document.querySelector('.nav-right');
-const blob = document.querySelector('.blob');
-const text = document.querySelectorAll('.text');
-const nightMode = document.querySelector('.label');
-const nightModeIcons = document.querySelectorAll('.nm-btn');
-const topic = document.querySelectorAll('.topic');
-const content = document.querySelectorAll('.content');
-const body = document.querySelector('body');
-const main = document.querySelector('main');
 
-const cv = document.querySelectorAll('#cv');
-
-//Burguer Toggle
 headerToggle.addEventListener('click', (e) => {
-    sidebar.classList.toggle('appear');
-    text.forEach((el) => {
-        el.classList.toggle('appear');
-    })
+   
 })
+
+// Carousel
+const slides = document.querySelectorAll('.skill-card');
+const totalSlides = slides.length;
+
+let slidePosition = 0;
+
+document.querySelector('#carousel-button-next').addEventListener('click', (el) => {
+    moveToNextSlide();
+});
+
+document.querySelector('#carousel-button-previous').addEventListener('click', (el) => {
+    moveToPreviousSlide();
+});
+
+function updateSlidePosition() {
+    for(let slide of slides) {
+        slide.classList.remove('skill-card-visible');
+        slide.classList.add('skill-card-hidden');
+    }
+
+    slides[slidePosition].classList.add('skill-card-visible');
+}
+
+function moveToNextSlide() {
+    if(slidePosition == totalSlides - 1) {
+        slidePosition = 0;
+    }
+    else {
+        slidePosition++;
+    }
+    updateSlidePosition();
+}
+
+function moveToPreviousSlide() {
+    if(slidePosition == 0) {
+        slidePosition = totalSlides;
+    }
+    else {
+        slidePosition--;
+    }
+    updateSlidePosition();
+}
